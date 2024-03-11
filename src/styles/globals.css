@@ -2,32 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #71717a;
+
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+.hover\:transform {
+  transition: transform 0.3s ease;
+}
+
+.hover\:scale-110 {
+  transition: transform 0.3s ease;
+}
+
+   .responsiveContainer {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 10px;
+   margin-bottom: 20px;
+   }
+
+@media (min-width: 375px) {
+.responsiveContainer {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .responsiveSelect {
+    width: auto;
+  }
+}
+@media (min-width: 360px) {
+  .mobilResponsive {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+@media (max-width: 440px) {
+  .mobilResponsive2 {
+    font-size: small;
+    border-bottom: 0;
+    border-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 440px) {
+  .mobilResponsive3 {
+   margin-top: 90px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
   }
 }
