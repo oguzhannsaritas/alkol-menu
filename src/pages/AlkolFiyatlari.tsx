@@ -8,16 +8,13 @@ import {
     TableCell,
     Input,
     Button,
-    Chip,
     User,
     Pagination,
     Selection,
-    ChipProps,
     SortDescriptor
 } from "@nextui-org/react";
 import { SearchIcon } from "./SearchIcon";
 import { columns, users } from "./data";
-import { capitalize } from "./utilis";
 
 const INITIAL_VISIBLE_COLUMNS = ["marka", "fiyat", "cl"];
 
@@ -26,9 +23,9 @@ type User = typeof users[0];
 export default function App() {
     const [filterValue, setFilterValue] = React.useState("");
     const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set([]));
-    const [visibleColumns, setVisibleColumns] = React.useState<Selection>(new Set(INITIAL_VISIBLE_COLUMNS));
+    const [visibleColumns] = React.useState<Selection>(new Set(INITIAL_VISIBLE_COLUMNS));
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
-    const [sortDescriptor, setSortDescriptor] = React.useState<SortDescriptor>({
+    const [sortDescriptor] = React.useState<SortDescriptor>({
         column: "age",
         direction: "ascending",
     });
@@ -53,7 +50,7 @@ export default function App() {
         }
 
         return filteredUsers;
-    }, [users, filterValue]);
+    }, [hasSearchFilter, filterValue]);
 
     const pages = Math.ceil(filteredItems.length / rowsPerPage);
 
@@ -149,8 +146,8 @@ export default function App() {
                     />
                 </div>
                 <div className="responsiveContainer">
-                    <span className=" bg-[#f4f4f5] mobilResponsive2 rounded-3xl border-solid border-[1px] border-b-4 border-t-4 pl-2 pr-2 text-[#71717A] text-small">Toplam alkol sayısı : {users.length} </span>
-                    <label className="flex items-center mobilResponsive2 justify-center bg-[#f4f4f5] rounded-3xl border-solid border-[1px] border-b-4 border-t-4 pl-2 pr-2 text-[#71717A] text-small">
+                    <span className=" bg-[#e5e7eb] mobilResponsive2 rounded-3xl border-solid border-[1px] border-b-4 border-t-4 pl-2 pr-2 text-[#71717A] text-small">Toplam alkol sayısı : {users.length} </span>
+                    <label className="flex items-center mobilResponsive2 justify-center bg-[#e5e7eb] rounded-3xl border-solid border-[1px] border-b-4 border-t-4 pl-2 pr-2 text-[#71717A] text-small">
                        Sayfa başına satır sayısı:
                         <select
                             className="bg-transparent outline-none text-[#71717A] text-small "
@@ -168,14 +165,7 @@ export default function App() {
 
             </div>
         );
-    }, [
-        filterValue,
-        visibleColumns,
-        onSearchChange,
-        onRowsPerPageChange,
-        users.length,
-        hasSearchFilter,
-    ]);
+    }, [filterValue, onSearchChange, onRowsPerPageChange, onClear]);
 
     const bottomContent = React.useMemo(() => {
         return (
@@ -200,7 +190,7 @@ export default function App() {
                 </div>
             </div>
         );
-    }, [selectedKeys, items.length, page, pages, hasSearchFilter]);
+    }, [page, pages, onPreviousPage, onNextPage]);
 
     return (
         <Table

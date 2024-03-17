@@ -9,11 +9,7 @@ body {
 
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+
 .hover\:transform {
   transition: transform 0.3s ease;
 }

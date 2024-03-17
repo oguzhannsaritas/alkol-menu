@@ -21,7 +21,7 @@ const users = [
         id: 2,
         name: "100’lük Yeni Rakı Yeni Seri",
         price: " 440 TL",
-        avatar: "https://lh3.googleusercontent.com/proxy/5qWSMh1H_Jiy83OdyFyY42oc9BThZUrkq-fnYxIwHjKTSq4MPdfB7zBEqFqkYDXKIMWhVQu2EtAbJYYzMtlPmyPCA1W8gfqzPZGk5wkVDJ2tOSUL7L74c6vaJuCAb_qHFuueMA9i",
+        avatar: "https://lh4.googleusercontent.com/proxy/gC8lMaoOwPzoSqyr4LiWE0vDXE2-aKVtqnY7DtAKXuVoFJdsoBPRh7PPcch9rBMv1dW-KZJ5lu20PP2DqK_0mEyv8EMkPJDvJCMI39GLtqvuPqifHGSpK_LhlNTN2wrBwg",
         cl: "100 CL",
     },
     {
@@ -63,8 +63,8 @@ const users = [
         id: 8,
         name: "50’lik Yeni Rakı Yeni Seri",
         price: "240 TL",
-        avatar: "https://lh3.googleusercontent.com/proxy/5qWSMh1H_Jiy83OdyFyY42oc9BThZUrkq-fnYxIwHjKTSq4MPdfB7zBEqFqkYDXKIMWhVQu2EtAbJYYzMtlPmyPCA1W8gfqzPZGk5wkVDJ2tOSUL7L74c6vaJuCAb_qHFuueMA9i",
         cl: "50 CL",
+        avatar:"https://menu.myqrcodemenu.com/files/products/5b276506-ec46-44f8-8f3a-36bc76c0dfc6.jpeg"
     },
     {
         id: 9,
@@ -218,7 +218,7 @@ const users = [
         name: "50’lik Chivas Regal",
         price: "780 TL",
         cl: "50 CL",
-        avatar:"https://lh3.googleusercontent.com/proxy/TlA-edQ8t57-ZTrKFM1ggXFWASFg3bMpscSjzfutxvCrHyo0er8N3daS8VPMrul0m3togWj0k_KeaoUoPoc28jnaOlN-PDbb9pi2Ekoq9dxoJyjhIXK0p_LoyiEOMpc_wA"
+        avatar:"https://lh3.googleusercontent.com/proxy/cnvWWE5wi9PoENUb9WHeGk1724wDtX-o_2tIPO-eCCECUzd-BniBDc1WaoQtPKR4OdryZR4RtglWFclGjUf0ssM6MQ9n49QmLjc8tGcFF1GfR5y8_TlGfk5yTTU"
     },
     {
         id: 31,
