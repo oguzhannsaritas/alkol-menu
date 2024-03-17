@@ -13,8 +13,8 @@ import {
     Selection,
     SortDescriptor
 } from "@nextui-org/react";
-import { SearchIcon } from "./SearchIcon";
-import { columns, users } from "./data";
+import { SearchIcon } from "../../../public/ıcon/SearchIcon";
+import { columns, users } from "@/_data/alkoller";
 
 const INITIAL_VISIBLE_COLUMNS = ["marka", "fiyat", "cl"];
 
@@ -150,7 +150,7 @@ export default function App() {
                     <label className="flex items-center mobilResponsive2 justify-center bg-[#e5e7eb] rounded-3xl border-solid border-[1px] border-b-4 border-t-4 pl-2 pr-2 text-[#71717A] text-small">
                        Sayfa başına satır sayısı:
                         <select
-                            className="bg-transparent outline-none text-[#71717A] text-small "
+                            className="bg-transparent  text-[#71717A] text-small "
                             onChange={onRowsPerPageChange}
                         >
                             <option value="5">5</option>

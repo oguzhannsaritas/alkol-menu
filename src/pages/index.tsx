@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import AlkolFiyatlari from "@/pages/AlkolFiyatlari";
+import AlkolFiyatlari from "@/pages/component/AlkolFiyatlari";
 import React from "react";
 import Image from "next/image";
 

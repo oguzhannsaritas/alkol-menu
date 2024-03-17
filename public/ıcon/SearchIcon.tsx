@@ -1,5 +1,5 @@
 import React from "react";
-import {IconSvgProps} from "./types";
+import {IconSvgProps} from "@/_types/types";
 
 export const SearchIcon = (props: IconSvgProps) => (
     <svg
